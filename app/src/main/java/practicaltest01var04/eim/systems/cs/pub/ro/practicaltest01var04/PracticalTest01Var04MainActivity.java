@@ -48,7 +48,7 @@ public class PracticalTest01Var04MainActivity extends AppCompatActivity {
 
         serviceState = false;
 
-        ifilter.addAction("Just a message");
+        ifilter.addAction("message");
     }
 
     @Override
@@ -124,6 +124,10 @@ public class PracticalTest01Var04MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        Log.d("[Message]", intent.getStringExtra("message"));
+    }
 
     @Override
     public void onResume() {

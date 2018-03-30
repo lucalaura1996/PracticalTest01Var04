@@ -30,8 +30,8 @@ public class ProcessingThread extends Thread {
 
     private void sendMessage() {
         Intent intent = new Intent();
-        intent.setAction("Message");
-        intent.putExtra("Message", "message");
+        intent.setAction("message");
+        intent.putExtra("message", "message");
 
         context.sendBroadcast(intent);
     }
